@@ -1,0 +1,41 @@
+{
+  "name": "@maxprilutskiy/package",
+  "description": "A simple typescript package template",
+  "author": "Max Prilutskiy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxprilutskiy/package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxprilutskiy/package/issues"
+  },
+  "homepage": "https://github.com/maxprilutskiy/package#readme",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "build": "unbuild",
+    "dev": "unbuild --stub && tsc -w --noEmit",
+    "test": "vitest run",
+    "new": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "changesets": "^1.0.2",
+    "husky": "^9.0.11",
+    "typescript": "^5.4.3",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.4.0"
+  }
+}
